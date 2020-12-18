@@ -1,6 +1,8 @@
 language: generic
 
-sudo: required
+dist: xenial
+
+os: linux
 
 services:
   - docker
@@ -16,7 +18,7 @@ after_success:
   - docker build -t 2yonghyun/docker-backend
   - docker build -t 2yonghyun/docker-nginx
 
-  - echo "$DOCKER_HUB_ACCESSKEY" | docker login -u "$DOCKER_HUB_ID" --password-stdin_open
+  - echo "$DOCKER_HUB_ACCESSKEY" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
   - docker push 2yonghyun/docker-frontend
   - docker push 2yonghyun/docker-backend
