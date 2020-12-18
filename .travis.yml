@@ -15,8 +15,8 @@ script:
 
 after_success:
   - docker build -t 2yonghyun/docker-frontend ./frontend
-  - docker build -t 2yonghyun/docker-backend
-  - docker build -t 2yonghyun/docker-nginx
+  - docker build -t 2yonghyun/docker-backend ./backend
+  - docker build -t 2yonghyun/docker-nginx ./nginx
 
   - echo "$DOCKER_HUB_ACCESSKEY" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
