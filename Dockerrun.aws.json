@@ -1,6 +1,6 @@
 {
     "AWSEBDockerrunVersion": 2,
-    "containerDefinition": [
+    "containerDefintions": [
         {
             "name": "frontend",
             "image": "2yonghyun/docker-frontend",
